@@ -1,0 +1,264 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/pattern.avif');
+    background-attachment: fixed;
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'menu content content'
+        'footer footer footer';
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+}
+
+.rainbow-text {
+    display: inline-block;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-menu-wrapper,
+.content-menu-wrapper {
+    position: sticky;
+    top: 20px;
+}
+
+.nav-menu {
+    grid-area: menu;
+    background-color: goldenrod;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.content {
+    grid-area: content;
+    background-color: white;
+}
+
+.content-menu-wrapper {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 10px;
+}
+
+.block {
+    padding: 20px;
+}
+
+
+.container {
+    background-color: lightblue;
+    padding: 30px 50px;
+}
+
+.terms-and-conditions {
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgb(255, 255, 255);
+    padding: 30px 50px;
+    margin: 30px auto;
+    background-color: white;
+    text-align: justify;
+}
+
+.illustration1 {
+    float: left;
+    padding-right: 15px;
+    cursor: help;
+}
+
+.illustration2 {
+    float: right;
+    padding-left: 15px;
+    cursor: help;
+}
+
+.footer {
+    color: white;
+    grid-area: footer;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-menu-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-form-inputs {
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-form-input {
+    flex: 1;
+}
+
+.comment-form,
+.comment {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    height: 7em;
+}
+
+form button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    width: fit-content;
+}
+
+
+/* Help button */
+
+.help-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.help-checkbox {
+    display: none;
+}
+
+.help-checkbox-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.help-checkbox:checked~.help-checkbox-label {
+    height: 20px;
+}
+
+.help-button {
+    width: 60px;
+    height: 60px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulsate 1.5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-button img {
+    width: 80%;
+    height: 80%;
+}
+
+.help-form {
+    position: relative;
+    overflow: hidden;
+    background-color: #007BFF;
+    padding: 30px 20px 20px;
+    border-radius: 10px;
+}
+
+.help-form::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    padding-right: 10px;
+    content: 'x';
+    text-align: right;
+    background-color: #0062cb;
+}
+
+.help-checkbox:not(:checked)~.help-form {
+    display: none;
+}
+
+.help-checkbox:checked~.help-button {
+    display: none;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

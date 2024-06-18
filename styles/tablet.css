@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'menu'
+            'content'
+            'footer';
+    }
+
+    .header,
+    .nav-menu,
+    .footer {
+        padding: 10px;
+    }
+
+    .comment-form-inputs {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    form button {
+        width: auto;
+    }
+}

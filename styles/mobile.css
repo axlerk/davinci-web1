@@ -1,0 +1,41 @@
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'menu'
+            'content'
+            'footer';
+    }
+
+    .comment-form-inputs {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .help-wrapper {
+        bottom: 0;
+        right: 0;
+    }
+
+    .help-button {
+        animation: none;
+        border-radius: 0;
+    }
+
+    .help-form {
+        width: 100vw;
+        height: 80vh;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        background: none;
+        padding: 0;
+    }
+
+    .terms-and-conditions {
+        box-shadow: none;
+    }
+}
