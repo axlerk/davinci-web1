@@ -25,4 +25,9 @@
     form button {
         width: auto;
     }
+    
+    .footer-menu-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }

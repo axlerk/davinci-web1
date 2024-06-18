@@ -63,6 +63,10 @@ ul {
     padding: 5px 10px;
 }
 
+.content-menu-mobile-wrapper {
+    display: none;
+}
+
 .block {
     padding: 20px;
 }
@@ -108,8 +112,9 @@ ul {
 }
 
 .footer-menu-list {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
 }
